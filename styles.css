@@ -1,0 +1,92 @@
+/*COLOR PALETTE
+dark blue - #0E3B43
+myrtle green - #357266
+blueishgrey -#A3BBAD
+brown - #65532F
+dark brown - #312509
+*/
+
+body{
+    color: white;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    background-color: rgb(208, 208, 208); 
+}
+
+h2 {
+    font-weight: 600;
+}
+
+.container{
+    display: grid;
+    margin: 10px 10px;
+    width: 98%;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header header profile photo"
+        "experience education blog photo"
+        "social contact sic-beats photo";
+}
+
+.grid-item {
+    padding: 30px;
+    background-size: cover;
+    display: grid;
+}
+
+.item-container {
+    margin: auto;
+}
+
+.main {
+    grid-area: header;
+    background: #357266;
+    text-align: left;
+}
+
+.profile {
+    grid-area: profile;
+    background: #65532F;
+}
+
+.experience {
+    grid-area: experience;
+    background-color: #0E3B43
+}
+
+.education {
+    grid-area: education;
+    background-color:#A3BBAD;
+}
+
+.blog {
+    grid-area: blog;
+    background-color: #357266;
+}
+
+.social {
+    grid-area: social;
+    background-color: #312509
+}
+
+.contact {
+    grid-area: contact;
+    background-color: #0E3B43
+}
+
+.sic-beats {
+    grid-area: sic-beats;
+    background-color: #312509
+}
+
+.photo {
+    grid-area: photo;
+    background-color: red;
+}
+
+.carter-photo {
+    height: 100%;
+    width: 100%;
+}
