@@ -1,0 +1,7 @@
+{
+  "workbench.iconTheme": "vscode-icons",
+  "files.autoSave": "afterDelay",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+}

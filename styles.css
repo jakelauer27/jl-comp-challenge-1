@@ -7,228 +7,236 @@ dark brown - #312509
 */
 
 /*GENERAL*/
+
 * {
-font-family: 'Open Sans', sans-serif;
-font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 
-body{
-    background-color: rgb(208, 208, 208); 
-    color: white;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+body {
+  color: white;
+  background-color: rgb(208, 208, 208); 
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 h1 {
-    margin: 0;
+  margin: 0;
 }
 
 h2 {
-    font-size: 10px;
-    font-weight: 400;
-    color: white;
-    fill: currentColor;
-    margin: 0;
-    transition: all ease .3s;
+  color: white;
+  font-size: 10px;
+  font-weight: 400;
+  fill: currentColor;
+  margin: 0;
+  transition: all ease .3s;
 }
 
 .icon {
-    font-size: 40px;
-    margin-bottom: 10px;
-    transition: all ease .3s;
+  font-size: 40px;
+  margin-bottom: 10px;
+  transition: all ease .3s;
  }
  
  button {
-     background: none;
-     color: white;
-     border: 2px solid white;
-     padding: 7px 14px;
-     margin-right: 10px;
-     transition: all ease .3s;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 7px 14px;
+  margin-right: 10px;
+  transition: all ease .3s;
  }
  
  .icon-button {
-     margin: 0 3px;
-     font-size: .8em;
+  font-size: .8em;
+  margin: 0 3px;
  }
 
 /*GRID*/
 
-.container{
-    display: grid;
-    margin: 10px auto;
-    max-width: 1300px;
-    max-height: 900px; 
-    width: 97%;
-    height: 50vw;
-    grid-template-columns: 1fr 1fr 1fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-        "header header profile photo"
-        "experience education blog photo"
-        "social contact sic-beats photo";
+.container {
+  display: grid;
+  margin: 10px auto;
+  max-width: 1300px;
+  max-height: 900px; 
+  height: 50vw;
+  width: 97%;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "header header profile photo"
+    "experience education blog photo"
+    "social contact sic-beats photo";
 }
 
 .grid-item {
-    padding: 25px;
-    background-size: cover;
-    display: grid;
+  background-size: cover;
+  display: grid;
+  padding: 25px;
 }
 
 .item-container {
-    margin: auto;
-    text-align: center;
+  margin: auto;
+  text-align: center;
 }
 
-#header-container {
-    text-align: left;
+.header-container {
+  text-align: left;
 }
 
 .main {
-    grid-area: header;
-    background: #357266;
+  background: #357266;
+  grid-area: header;
 }
 
 .profile {
-    grid-area: profile;
-    background: #65532F;
+  background: #65532F;
+  grid-area: profile;
 }
 
 .experience {
-    grid-area: experience;
-    background-color: #0E3B43
+  background-color: #0E3B43;
+  grid-area: experience;
 }
 
 .education {
-    grid-area: education;
-    background-color:#A3BBAD;
+  background-color:#A3BBAD;
+  grid-area: education;
 }
 
 .blog {
-    grid-area: blog;
-    background-color: #357266;
+  background-color: #357266;
+  grid-area: blog;
 }
 
 .social {
-    grid-area: social;
-    background-color: #312509;
+  background-color: #312509;
+  grid-area: social;
 }
 
 .contact {
-    grid-area: contact;
-    background-color: #0E3B43
+  background-color: #0E3B43;
+  grid-area: contact;
 }
 
 .sic-beats {
-    grid-area: sic-beats;
-    background-color: #A3BBAD;
+  background-color: #A3BBAD;
+  grid-area: sic-beats;
 }
 
 .photo {
-    grid-area: photo;
-    position: relative;
-    display: grid;
+  display: grid;
+  grid-area: photo;
+  position: relative;
+  background-image: url("images/carter4.png");
+  background-size: cover;
 }
 
 /*PHOTO SCROLLER*/
 
 .slider{
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-points-x: repeat(inherit);
-    scroll-snap-type: mandatory;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-points-x: repeat(inherit);
+  scroll-snap-type: mandatory;
 }
 
 .slide {
-    width: 100%;
-    flex-shrink: 0;
-    height: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  width: 100%;
 }
 
-#slide-1 {
-    background-image: url("images/carter3.jpg");
-    background-size: cover;
+.slide-1 {
+  background-image: url("images/carter3.jpg");
+  background-size: cover;
 }
 
-#slide-2 {
-    background-image: url("images/carter2.jpg");
-    background-size: cover;
+.slide-2 {
+  background-image: url("images/carter2.jpg");
+  background-size: cover;
 }
 
-#slide-3 {
-    background-image: url("images/carter1.jpg");
-    background-size: cover;
+.slide-3 {
+  background-image: url("images/carter1.jpg");
+  background-size: cover;
 }
 
-
-.photo a {
-    position: absolute;
-    top: 6px;
-    height: 9px;
-    width: 9px;
-    background-color: white;
-    opacity: .6;
-    border-radius: 50%;
+.slide-button {
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  height: 9px;
+  opacity: 1;
+  width: 9px;
+  list-style-type: none;
+  z-index: 1;
 }
 
-#slide-button-1 {
-    right: 36px
+.slide-button-1 {
+  right: 36px
 }
 
-#slide-button-2 {
-    right: 23px
+.slide-button-2 {
+  right: 23px
 }
 
-#slide-button-3 {
-    right: 10px
+.slide-button-3 {
+  right: 10px
 }
 
 .photo a:active{
-    opacity: 1;
+  opacity: 1;
 }
 
-.arrow-right,
-.arrow-left {
-    position: absolute;
-    top: 47%;
-    background-color: rgb(65, 65, 65);
-    color: lightgrey;
-    opacity: .7;
-    border: 2px solid lightgray;
-    padding: 12px;
-    border-radius: 50%;
-    transition: all ease .3s;
+.arrow {
+  position: absolute;
+  top: 47%;
+  background-color: rgb(65, 65, 65);
+  color: lightgrey;
+  opacity: .7;
+  border: 2px solid lightgray;
+  padding: 12px;
+  border-radius: 50%;
+  transition: all ease .3s;
 }
 
 .arrow-left {
-    left: 2%;
+  left: 2%;
 }
 
 .arrow-right {
-    right: 2%;
+  right: 2%;
 }
 
+.noDisplay {
+  display: none;
+}
 
+.buttonNoHighlight {
+  opacity: .6;
+}
 
 /*HOVER EFFECTS*/
 
 button:hover {
-    cursor: pointer;
-    transform: scale(1.05);
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .item-container:hover .icon{
-   transform: scale(1.1);
-   cursor: pointer;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .item-container:hover h2 {
-    transform: scale(1.1);
-    cursor: pointer;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
-.arrow-right:hover,
-.arrow-left:hover {
+.arrow:hover {
   background-color: lightgray;  
   color: rgb(65, 65, 65);
   border-color: rgb(65, 65, 65);
@@ -237,68 +245,87 @@ button:hover {
 }
 
 @media screen and (max-width: 1100px) {
-    .container{
-        width: 700px;
-        height: 1000px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-            "header photo photo"
-            "header photo photo"
-            "profile photo photo"
-            "experience education blog"
-            "social contact sic-beats";
+  .container{
+    width: 700px;
+    height: 1000px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      "header photo photo"
+      "header photo photo"
+      "profile photo photo"
+      "experience education blog"
+      "social contact sic-beats";
     }
 
     button {
-        margin: 3px;
+      margin: 3px;
     }
 
     .grid-item h2 {
-        padding-bottom: 50px;
+      padding-bottom: 50px;
     }
 
     .grid-item i { 
-        padding-top: 50px
+      padding-top: 50px
     }
     
-    #icon-button-1,
-    #icon-button-2 {
-        padding-top: 7px;
+    .icon-button {
+      padding-top: 7px;
     }
 
-    #header-container {
-        text-align: center;
-        font-size: 12px;
+    .header-container {
+      text-align: center;
+      font-size: 12px;
     }
 
     @media screen and (max-width: 720px) {
-        .container{
-            width: 96%;
-            max-width: 500px;
-            height: auto;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 2fr 400px 1fr 1fr 1fr;
-            grid-template-areas: 
-                "header header"
-                "photo photo"
-                "profile profile"
-                "experience blog"
-                "education contact"
-                "social sic-beats";
+      .container{
+        width: 96%;
+        max-width: 500px;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 400px 1fr 1fr 1fr;
+        grid-template-areas: 
+          "header header"
+          "photo photo"
+          "profile profile"
+          "experience blog"
+          "education contact"
+          "social sic-beats";
          }
 
-         .grid-item h2 {
-            padding-bottom: 40px;
+        .grid-item h2 {
+          padding-bottom: 40px;
         }
     
         .grid-item i { 
-            padding-top: 40px
+          padding-top: 40px
         }
         
-        #icon-button-1,
-        #icon-button-2 {
-            padding-top: 7px;
+        .icon-button {
+          padding-top: 7px;
         }
     }
 }
+
+/*ANIMATION FOR SCROLLER*/
+
+@keyframes slideInRight {
+  from {transform: translateX(100%)}
+  to {transform: translateX(0)}
+}
+
+@keyframes slideInLeft {
+  from {transform: translateX(-100%)}
+  to {transform: translateX(0)}
+}
+
+.scrollInLeft {
+  animation: slideInLeft 1s ease 0s 1;
+}
+
+.scrollInRight {
+  animation: slideInRight 1s ease 0s 1;
+}
+
