@@ -239,7 +239,7 @@ button:hover {
 @media screen and (max-width: 1100px) {
     .container{
         width: 700px;
-        height: auto;
+        height: 1000px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
@@ -251,16 +251,31 @@ button:hover {
     }
 
     button {
-        margin: 10px 5px;
+        margin: 3px;
+    }
+
+    .grid-item h2 {
+        padding-bottom: 50px;
+    }
+
+    .grid-item i { 
+        padding-top: 50px
+    }
+    
+    #icon-button-1,
+    #icon-button-2 {
+        padding-top: 7px;
     }
 
     #header-container {
         text-align: center;
+        font-size: 12px;
     }
 
     @media screen and (max-width: 720px) {
         .container{
             width: 96%;
+            max-width: 500px;
             height: auto;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 2fr 400px 1fr 1fr 1fr;
@@ -268,10 +283,22 @@ button:hover {
                 "header header"
                 "photo photo"
                 "profile profile"
-                "education blog"
-                "social contact"
-                "experience sic-beats";
+                "experience blog"
+                "education contact"
+                "social sic-beats";
          }
-         
+
+         .grid-item h2 {
+            padding-bottom: 40px;
+        }
+    
+        .grid-item i { 
+            padding-top: 40px
+        }
+        
+        #icon-button-1,
+        #icon-button-2 {
+            padding-top: 7px;
+        }
     }
 }
