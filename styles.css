@@ -111,7 +111,7 @@ h2 {
 
 .social {
     grid-area: social;
-    background-color: #312509
+    background-color: #312509;
 }
 
 .contact {
@@ -121,7 +121,7 @@ h2 {
 
 .sic-beats {
     grid-area: sic-beats;
-    background-color: #312509
+    background-color: #A3BBAD;
 }
 
 .photo {
@@ -146,7 +146,7 @@ h2 {
 }
 
 #slide-1 {
-    background-image: url("images/carter1.jpg");
+    background-image: url("images/carter3.jpg");
     background-size: cover;
 }
 
@@ -156,7 +156,7 @@ h2 {
 }
 
 #slide-3 {
-    background-image: url("images/carter3.jpg");
+    background-image: url("images/carter1.jpg");
     background-size: cover;
 }
 
@@ -236,74 +236,42 @@ button:hover {
   cursor: pointer;
 }
 
-@media screen and (max-width = 1100px) {
+@media screen and (max-width: 1100px) {
     .container{
+        width: 700px;
+        height: auto;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
             "header photo photo"
             "header photo photo"
-            "profilt photo photo";
+            "profile photo photo"
+            "experience education blog"
+            "social contact sic-beats";
     }
-    
-    .grid-item {
-        padding: 25px;
-        background-size: cover;
-        display: grid;
+
+    button {
+        margin: 10px 5px;
     }
-    
-    .item-container {
-        margin: auto;
+
+    #header-container {
         text-align: center;
     }
-    
-    #header-container {
-        text-align: left;
-    }
-    
-    .main {
-        grid-area: header;
-        background: #357266;
-    }
-    
-    .profile {
-        grid-area: profile;
-        background: #65532F;
-    }
-    
-    .experience {
-        grid-area: experience;
-        background-color: #0E3B43
-    }
-    
-    .education {
-        grid-area: education;
-        background-color:#A3BBAD;
-    }
-    
-    .blog {
-        grid-area: blog;
-        background-color: #357266;
-    }
-    
-    .social {
-        grid-area: social;
-        background-color: #312509
-    }
-    
-    .contact {
-        grid-area: contact;
-        background-color: #0E3B43
-    }
-    
-    .sic-beats {
-        grid-area: sic-beats;
-        background-color: #312509
-    }
-    
-    .photo {
-        grid-area: photo;
-        position: relative;
-        display: grid;
+
+    @media screen and (max-width: 720px) {
+        .container{
+            width: 96%;
+            height: auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 2fr 400px 1fr 1fr 1fr;
+            grid-template-areas: 
+                "header header"
+                "photo photo"
+                "profile profile"
+                "education blog"
+                "social contact"
+                "experience sic-beats";
+         }
+         
     }
 }
