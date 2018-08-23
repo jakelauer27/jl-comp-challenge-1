@@ -13,11 +13,14 @@ font-weight: 300;
 }
 
 body{
+    background-color: rgb(208, 208, 208); 
     color: white;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    background-color: rgb(208, 208, 208); 
+}
+h1 {
+    margin: 0;
 }
 
 h2 {
@@ -53,9 +56,11 @@ h2 {
 
 .container{
     display: grid;
-    margin: 10px 10px;
+    margin: 10px auto;
+    max-width: 1300px;
+    max-height: 900px; 
     width: 97%;
-    height: 62vw;
+    height: 50vw;
     grid-template-columns: 1fr 1fr 1fr 2fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
@@ -130,6 +135,8 @@ h2 {
 .slider{
     display: flex;
     overflow-x: auto;
+    scroll-snap-points-x: repeat(inherit);
+    scroll-snap-type: mandatory;
 }
 
 .slide {
@@ -144,7 +151,7 @@ h2 {
 }
 
 #slide-2 {
-    background-image: url("images/carter2.jpeg");
+    background-image: url("images/carter2.jpg");
     background-size: cover;
 }
 
@@ -153,22 +160,30 @@ h2 {
     background-size: cover;
 }
 
-.slider-buttons {
-    position: absolute;
-    top: 1px;
-    right: 8px;
-}
 
-.slider-buttons div {
-    display: inline-block;
-    height: 7px;
-    width: 7px;
+.photo a {
+    position: absolute;
+    top: 6px;
+    height: 9px;
+    width: 9px;
     background-color: white;
     opacity: .6;
     border-radius: 50%;
 }
 
-.slider-buttons div:clicked{
+#slide-button-1 {
+    right: 36px
+}
+
+#slide-button-2 {
+    right: 23px
+}
+
+#slide-button-3 {
+    right: 10px
+}
+
+.photo a:active{
     opacity: 1;
 }
 
@@ -219,4 +234,76 @@ button:hover {
   border-color: rgb(65, 65, 65);
   transform: scale(1.2);
   cursor: pointer;
+}
+
+@media screen and (max-width = 1100px) {
+    .container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "header photo photo"
+            "header photo photo"
+            "profilt photo photo";
+    }
+    
+    .grid-item {
+        padding: 25px;
+        background-size: cover;
+        display: grid;
+    }
+    
+    .item-container {
+        margin: auto;
+        text-align: center;
+    }
+    
+    #header-container {
+        text-align: left;
+    }
+    
+    .main {
+        grid-area: header;
+        background: #357266;
+    }
+    
+    .profile {
+        grid-area: profile;
+        background: #65532F;
+    }
+    
+    .experience {
+        grid-area: experience;
+        background-color: #0E3B43
+    }
+    
+    .education {
+        grid-area: education;
+        background-color:#A3BBAD;
+    }
+    
+    .blog {
+        grid-area: blog;
+        background-color: #357266;
+    }
+    
+    .social {
+        grid-area: social;
+        background-color: #312509
+    }
+    
+    .contact {
+        grid-area: contact;
+        background-color: #0E3B43
+    }
+    
+    .sic-beats {
+        grid-area: sic-beats;
+        background-color: #312509
+    }
+    
+    .photo {
+        grid-area: photo;
+        position: relative;
+        display: grid;
+    }
 }
