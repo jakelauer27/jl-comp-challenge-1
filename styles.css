@@ -6,6 +6,7 @@ brown - #65532F
 dark brown - #312509
 */
 
+/*GENERAL*/
 * {
 font-family: 'Open Sans', sans-serif;
 font-weight: 300;
@@ -28,11 +29,33 @@ h2 {
     transition: all ease .3s;
 }
 
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    transition: all ease .3s;
+ }
+ 
+ button {
+     background: none;
+     color: white;
+     border: 2px solid white;
+     padding: 7px 14px;
+     margin-right: 10px;
+     transition: all ease .3s;
+ }
+ 
+ .icon-button {
+     margin: 0 3px;
+     font-size: .8em;
+ }
+
+/*GRID*/
+
 .container{
     display: grid;
     margin: 10px 10px;
-    width: 98%;
-    height: 98%;
+    width: 97%;
+    height: 62vw;
     grid-template-columns: 1fr 1fr 1fr 2fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
@@ -54,26 +77,6 @@ h2 {
 
 #header-container {
     text-align: left;
-}
-
-.icon {
-   font-size: 40px;
-   margin-bottom: 10px;
-   transition: all ease .3s;
-}
-
-button {
-    background: none;
-    color: white;
-    border: 2px solid white;
-    padding: 7px 14px;
-    margin-right: 10px;
-    transition: all ease .3s;
-}
-
-.icon-button {
-    margin: 0 3px;
-    font-size: .8em;
 }
 
 .main {
@@ -119,7 +122,54 @@ button {
 .photo {
     grid-area: photo;
     position: relative;
-    background-color: red;
+    display: grid;
+}
+
+/*PHOTO SCROLLER*/
+
+.slider{
+    display: flex;
+    overflow-x: auto;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+#slide-1 {
+    background-image: url("images/carter1.jpg");
+    background-size: cover;
+}
+
+#slide-2 {
+    background-image: url("images/carter2.jpeg");
+    background-size: cover;
+}
+
+#slide-3 {
+    background-image: url("images/carter3.jpg");
+    background-size: cover;
+}
+
+.slider-buttons {
+    position: absolute;
+    top: 1px;
+    right: 8px;
+}
+
+.slider-buttons div {
+    display: inline-block;
+    height: 7px;
+    width: 7px;
+    background-color: white;
+    opacity: .6;
+    border-radius: 50%;
+}
+
+.slider-buttons div:clicked{
+    opacity: 1;
 }
 
 .arrow-right,
@@ -143,11 +193,9 @@ button {
     right: 2%;
 }
 
-.carter-photo {
-    height: 100%;
-    width: 100%;
-    display: none;
-}
+
+
+/*HOVER EFFECTS*/
 
 button:hover {
     cursor: pointer;
@@ -171,8 +219,4 @@ button:hover {
   border-color: rgb(65, 65, 65);
   transform: scale(1.2);
   cursor: pointer;
-}
-
-.photoDisplay {
-    display: block;
 }
