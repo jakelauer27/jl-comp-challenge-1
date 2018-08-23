@@ -6,6 +6,11 @@ brown - #65532F
 dark brown - #312509
 */
 
+* {
+font-family: 'Open Sans', sans-serif;
+font-weight: 300;
+}
+
 body{
     color: white;
     margin: 0;
@@ -15,13 +20,19 @@ body{
 }
 
 h2 {
-    font-weight: 600;
+    font-size: 10px;
+    font-weight: 400;
+    color: white;
+    fill: currentColor;
+    margin: 0;
+    transition: all ease .3s;
 }
 
 .container{
     display: grid;
     margin: 10px 10px;
     width: 98%;
+    height: 98%;
     grid-template-columns: 1fr 1fr 1fr 2fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
@@ -31,19 +42,43 @@ h2 {
 }
 
 .grid-item {
-    padding: 30px;
+    padding: 25px;
     background-size: cover;
     display: grid;
 }
 
 .item-container {
     margin: auto;
+    text-align: center;
+}
+
+#header-container {
+    text-align: left;
+}
+
+.icon {
+   font-size: 40px;
+   margin-bottom: 10px;
+   transition: all ease .3s;
+}
+
+button {
+    background: none;
+    color: white;
+    border: 2px solid white;
+    padding: 7px 14px;
+    margin-right: 10px;
+    transition: all ease .3s;
+}
+
+.icon-button {
+    margin: 0 3px;
+    font-size: .8em;
 }
 
 .main {
     grid-area: header;
     background: #357266;
-    text-align: left;
 }
 
 .profile {
@@ -83,10 +118,61 @@ h2 {
 
 .photo {
     grid-area: photo;
+    position: relative;
     background-color: red;
+}
+
+.arrow-right,
+.arrow-left {
+    position: absolute;
+    top: 47%;
+    background-color: rgb(65, 65, 65);
+    color: lightgrey;
+    opacity: .7;
+    border: 2px solid lightgray;
+    padding: 12px;
+    border-radius: 50%;
+    transition: all ease .3s;
+}
+
+.arrow-left {
+    left: 2%;
+}
+
+.arrow-right {
+    right: 2%;
 }
 
 .carter-photo {
     height: 100%;
     width: 100%;
+    display: none;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.item-container:hover .icon{
+   transform: scale(1.1);
+   cursor: pointer;
+}
+
+.item-container:hover h2 {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.arrow-right:hover,
+.arrow-left:hover {
+  background-color: lightgray;  
+  color: rgb(65, 65, 65);
+  border-color: rgb(65, 65, 65);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.photoDisplay {
+    display: block;
 }
