@@ -129,8 +129,6 @@ h2 {
   display: grid;
   grid-area: photo;
   position: relative;
-  background-image: url("images/carter4.png");
-  background-size: cover;
 }
 
 /*PHOTO SCROLLER*/
@@ -312,13 +310,36 @@ button:hover {
 /*ANIMATION FOR SCROLLER*/
 
 @keyframes slideInRight {
-  from {transform: translateX(100%)}
+  from {
+    transform: translateX(-100%);
+
+  }
   to {transform: translateX(0)}
 }
 
 @keyframes slideInLeft {
-  from {transform: translateX(-100%)}
+  from {
+    transform: translateX(100%);
+  }
   to {transform: translateX(0)}
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
 
 .scrollInLeft {
@@ -328,4 +349,13 @@ button:hover {
 .scrollInRight {
   animation: slideInRight 1s ease 0s 1;
 }
+
+.scrollOutLeft {
+  animation: slideOutLeft 1s ease 0s 1;
+}
+
+.scrollOutRight {
+  animation: slideOutRight 1s ease 0s 1;
+}
+
 
