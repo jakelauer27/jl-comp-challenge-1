@@ -20,6 +20,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
+
 h1 {
   margin: 0;
 }
@@ -38,6 +39,8 @@ h2 {
   margin-bottom: 10px;
   transition: all ease .3s;
  }
+
+ /*BUTTON STYLING*/
  
  button {
   background: none;
@@ -243,6 +246,8 @@ button:hover {
   cursor: pointer;
 }
 
+/*IPAD SIZING*/
+
 @media screen and (max-width: 1100px) {
   .container{
     width: 760px;
@@ -295,6 +300,8 @@ button:hover {
       margin-top: 20px
     }
 
+    /*MOBILE SIZING*/
+
     @media screen and (max-width: 780px) {
       .container{
         width: 96%;
@@ -341,54 +348,3 @@ button:hover {
         }
     }
 }
-
-/*ANIMATION FOR SCROLLER*/
-/* 
-@keyframes slideInRight {
-  from {
-    transform: translateX(-100%);
-
-  }
-  to {transform: translateX(0)}
-}
-
-@keyframes slideInLeft {
-  from {
-    transform: translateX(100%);
-  }
-  to {transform: translateX(0)}
-}
-
-@keyframes slideOutRight {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes slideOutLeft {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(100%);
-  }
-} */
-/* 
-.scrollInLeft {
-  animation: slideInLeft 1s ease 0s 1;
-}
-
-.scrollInRight {
-  animation: slideInRight 1s ease 0s 1;
-}
-
-.scrollOutLeft {
-  animation: slideOutLeft 1s ease 0s 1;
-}
-
-.scrollOutRight {
-  animation: slideOutRight 1s ease 0s 1;
-} */
