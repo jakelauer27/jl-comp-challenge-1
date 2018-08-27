@@ -54,7 +54,8 @@ function showPhoto() {
     }
     photos[index].classList.remove("noDisplay");
     photoIndicators[index].classList.remove("buttonNoHighlight");
-  }
+  } 
+
 
   // function scroll(direction, scrollDirection) {
   //   photos[index].classList.remove("noDisplay");

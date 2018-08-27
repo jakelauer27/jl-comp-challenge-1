@@ -59,8 +59,8 @@ h2 {
   display: grid;
   margin: 10px auto;
   max-width: 1300px;
-  max-height: 900px; 
-  height: 50vw;
+  max-height: 730px; 
+  height: 54vw;
   width: 97%;
   grid-template-columns: 1fr 1fr 1fr 2fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -144,6 +144,7 @@ h2 {
   height: 100%;
   flex-shrink: 0;
   width: 100%;
+  transition: all ease 1s;
 }
 
 .slide-1 {
@@ -244,10 +245,11 @@ button:hover {
 
 @media screen and (max-width: 1100px) {
   .container{
-    width: 700px;
-    height: 1000px;
+    width: 760px;
+    height: auto;
+    max-height: none;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
       "header photo photo"
       "header photo photo"
@@ -256,34 +258,50 @@ button:hover {
       "social contact sic-beats";
     }
 
-    button {
-      margin: 3px;
+    .header-button {
+      margin: 12px;
+      width: 80%;
+      font-size: 15px;
     }
 
     .grid-item h2 {
-      padding-bottom: 50px;
+      padding-bottom: 60px;
     }
 
     .grid-item i { 
-      padding-top: 50px
+      padding-top: 60px
     }
     
-    .icon-button {
-      padding-top: 7px;
+    #icon-button-1,
+    #icon-button-2 {
+      padding-top: 5px;
+      width: 80%
     }
 
     .header-container {
       text-align: center;
       font-size: 12px;
+      margin: 0;
+      font-size: 20px;
     }
 
-    @media screen and (max-width: 720px) {
+    .main {
+      background: #357266;
+      grid-area: header;
+      padding: 10px;
+    }
+
+    h1 {
+      margin-top: 20px
+    }
+
+    @media screen and (max-width: 780px) {
       .container{
         width: 96%;
         max-width: 500px;
         height: auto;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 2fr 400px 1fr 1fr 1fr;
+        grid-template-rows: 1fr 600px 1fr 1fr 1fr;
         grid-template-areas: 
           "header header"
           "photo photo"
@@ -304,11 +322,28 @@ button:hover {
         .icon-button {
           padding-top: 7px;
         }
+
+        .header-button {
+          margin: 12px;
+          width: 40%;
+          font-size: 12px;
+        }
+
+        .header-container {
+          text-align: center;
+          font-size: 12px;
+          margin: 0;
+          font-size: 20px;
+        }
+
+        h1 {
+         margin-top: 0;
+        }
     }
 }
 
 /*ANIMATION FOR SCROLLER*/
-
+/* 
 @keyframes slideInRight {
   from {
     transform: translateX(-100%);
@@ -340,8 +375,8 @@ button:hover {
   to {
     transform: translateX(100%);
   }
-}
-
+} */
+/* 
 .scrollInLeft {
   animation: slideInLeft 1s ease 0s 1;
 }
@@ -356,6 +391,4 @@ button:hover {
 
 .scrollOutRight {
   animation: slideOutRight 1s ease 0s 1;
-}
-
-
+} */
