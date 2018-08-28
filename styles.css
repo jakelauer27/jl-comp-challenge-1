@@ -62,7 +62,7 @@ h2 {
   display: grid;
   margin: 10px auto;
   max-width: 1300px;
-  max-height: 730px; 
+  max-height: 710px; 
   height: 54vw;
   width: 97%;
   grid-template-columns: 1fr 1fr 1fr 2fr;
@@ -248,7 +248,7 @@ button:hover {
 
 /*IPAD SIZING*/
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 760px) and (max-width: 1100px) {
   .container{
     width: 760px;
     height: auto;
@@ -270,11 +270,11 @@ button:hover {
     }
 
     .grid-item h2 {
-      padding-bottom: 60px;
+      padding-bottom: 70px;
     }
 
     .grid-item i { 
-      padding-top: 60px
+      padding-top: 70px
     }
     
     #icon-button-1,
@@ -285,9 +285,8 @@ button:hover {
 
     .header-container {
       text-align: center;
-      font-size: 12px;
-      margin: 0;
       font-size: 20px;
+      margin: 0;
     }
 
     .main {
@@ -297,54 +296,57 @@ button:hover {
     }
 
     h1 {
-      margin-top: 20px
+      margin-top: 20px;
+      font-size: 40px;
+    }
+}
+ /*MOBILE SIZING*/
+
+ @media screen and (max-width: 760px) {
+  .container{
+    width: 96%;
+    max-width: 380px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 160px 488px repeat(7, 110px);
+    grid-template-areas: 
+      "header"
+      "photo"
+      "profile"
+      "experience" 
+      "blog"
+      "education" 
+      "contact"
+      "social" 
+      "sic-beats";
+     }
+
+    .grid-item {
+      padding: 0;
     }
 
-    /*MOBILE SIZING*/
+    .grid-item h2,
+    .grid-item i {
+      padding: 0;
+    }
 
-    @media screen and (max-width: 780px) {
-      .container{
-        width: 96%;
-        max-width: 500px;
-        height: auto;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 600px 1fr 1fr 1fr;
-        grid-template-areas: 
-          "header header"
-          "photo photo"
-          "profile profile"
-          "experience blog"
-          "education contact"
-          "social sic-beats";
-         }
+    .icon-button {
+      padding-top: 7px;
+    }
 
-        .grid-item h2 {
-          padding-bottom: 40px;
-        }
-    
-        .grid-item i { 
-          padding-top: 40px
-        }
-        
-        .icon-button {
-          padding-top: 7px;
-        }
+    .header-button {
+      margin: 12px;
+      width: 40%;
+      font-size: 8px;
+    }
 
-        .header-button {
-          margin: 12px;
-          width: 40%;
-          font-size: 12px;
-        }
+    .header-container {
+      text-align: center;
+      font-size: 11px;
+      margin: 0 10px;
+    }
 
-        .header-container {
-          text-align: center;
-          font-size: 12px;
-          margin: 0;
-          font-size: 20px;
-        }
-
-        h1 {
-         margin-top: 0;
-        }
+    h1 {
+     margin-top: 10px;
+     font-size: 25px;
     }
 }
