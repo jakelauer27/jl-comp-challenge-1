@@ -9,7 +9,7 @@
 - Push your final work to github pages
 
  ## Original Composition
-  ![Original Comp](images/original.png)
+  ![Original Comp](images/Original.png)
   
   ## My Composition
-  ![My Comp](images/mine.png)
+  ![My Comp](images/Mine.png)
