@@ -8,6 +8,8 @@
 - Include a README with the repo that provides a brief overview of the project, and images of both the original comp and your   version.
 - Push your final work to github pages
 
-### Original Comp
-
-### My Comp
+ ## Original Composition
+  ![Original Comp](images/original.png)
+  
+  ## My Composition
+  ![My Comp](images/mine.png)
